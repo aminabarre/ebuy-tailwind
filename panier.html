@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+</head>
+<body class="bg-[#f9f0f2] ">
+    <nav class="w-full bg-white shadow-sm sticky top-0">
+
+  <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+  <div class="max-w-7xl mx-auto px-4 md:px-10">
+    <div class="flex items-center h-20">
+
+      <!-- LOGO -->
+      <a href="index.html"
+        class="text-4xl font-semibold italic text-[#3b2f2f] flex-shrink-0">
+        Ebuy
+      </a>
+
+      <!-- LIENS DESKTOP -->
+      <div class="hidden md:flex flex-1 justify-center gap-10 text-[#3b2f2f] text-xl italic font-medium">
+        <a href="index.html">Accueil</a>
+        <a href="categorie.html">Catégories</a>
+        <a href="favorite.html">Favoris</a>
+        <a href="vendeur.html">Vendeur</a>
+      </div>
+
+      <!-- ICÔNES -->
+      <div class="flex items-center gap-6 text-[#3b2f2f] ml-auto">
+
+        <!-- Recherche -->
+        <button class="text-[#3b2f2f] hover:text-black transition">
+           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" 
+           fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" 
+            d="M21 21l-4.35-4.35m1.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
+           </svg> 
+        </button>
+
+        <!-- Cloche -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" 
+         d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11 a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341
+          C7.67 6.165 6 8.388 6 11v3.159 c0 .538-.214 1.055-.595 1.436L4 17h5m6 0 a3 3 0 11-6 0h6z" />
+         </svg>
+       </button>
+
+        <!-- Panier -->
+        <a href="panier.html" class="text-[#3b2f2f] hover:text-black transition">
+           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" 
+           fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" 
+           d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h13M7 13l-4-8M16 16a1 1 0 100 2 1 1 0 000-2zM8 16a1 1 0 100 2 1 1 0 000-2z" />
+           </svg> 
+        </a>
+
+        <!-- Profil -->
+        <a href="register.html" class="hover:text-black transition"> 
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+             <path d="M12 12a5 5 0 100-10 5 5 0 000 10z"/> 
+             <path d="M12 14c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"/> 
+            </svg> 
+        </a>
+
+        <!-- BURGER -->
+        <label for="menu-toggle" class="md:hidden cursor-pointer">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </label>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <div class="hidden peer-checked:block md:hidden px-4 pb-6 space-y-4 text-[#3b2f2f] text-lg italic font-medium bg-white">
+    <a href="index.html">Accueil</a>
+    <a href="categorie.html">Catégories</a>
+    <a href="favorite.html">Favoris</a>
+    <a href="vendeur.html">Vendeur</a>
+  </div>
+
+</nav>
+<main class="bg-[url('assets/images/accueil/fond2.png')] bg-cover bg-center py-12">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Breadcrumb -->
+     <div class="flex items-center gap-2 text-sm text-[#6b5e5e] mb-4 border-b pb-4 rounded bg-white shadow px-4 py-2 w-fit">
+      <a href="index.html" class="hover:underline">Accueil</a>
+      <span>/</span>
+      <span>Panier</span>
+    </div>
+    
+
+    <!-- Titre -->
+     <div class="rounded-xl shadow p-6 mb-10">
+    <h1 class="text-4xl font-serif text-[#3b2f2f] mb-2">
+      Votre panier
+    </h1>
+    <p class="text-[#6b5e5e] mb-10">
+      Vous avez 2 articles dans votre panier
+    </p>
+
+    <!-- TABLE PANIER -->
+    <div class="bg-white rounded-xl shadow p-6 mb-10">
+
+      <!-- Header -->
+      <div class="hidden md:grid grid-cols-12 font-medium text-[#3b2f2f] border-b pb-4 mb-6">
+
+        <div class="col-span-6">Produit</div>
+        <div class="col-span-2">Prix</div>
+        <div class="col-span-2">Quantité</div>
+        <div class="col-span-2">Total</div>
+      </div>
+
+      <!-- Produit 1 -->
+      <!-- Produit -->
+<div class="border-b pb-6 mb-6">
+
+  <div class="grid gap-4 md:grid-cols-12 items-center">
+
+    <!-- Produit -->
+    <div class="md:col-span-6 flex gap-4 items-center">
+      <img src="assets/images/accueil/panier1.jpg"
+           class="w-20 border rounded-lg">
+
+      <p class="font-medium">
+        Montre intelligente Roségold
+      </p>
+    </div>
+
+    <!-- Prix -->
+    <div class="md:col-span-2 flex justify-between md:block">
+      <span class="md:hidden font-medium">Prix :</span>
+      <span>159,99€</span>
+    </div>
+
+    <!-- Quantité -->
+    <div class="md:col-span-2 flex justify-between md:block">
+
+      <span class="md:hidden font-medium">Quantité :</span>
+
+      <div class="flex border rounded-md w-fit">
+        <button class="px-3">-</button>
+        <span class="px-3">1</span>
+        <button class="px-3">+</button>
+      </div>
+
+    </div>
+
+    <!-- Total -->
+    <div class="md:col-span-2 flex justify-between items-center">
+
+      <span class="md:hidden font-medium">Total :</span>
+
+      <div class="flex items-center gap-3">
+        <span>159,99€</span>
+        <span class="cursor-pointer">🗑</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+      <!-- Produit 2 -->
+      <!-- Produit -->
+<div class="border-b pb-6 mb-6">
+
+  <div class="grid gap-4 md:grid-cols-12 items-center">
+
+    <!-- Produit -->
+    <div class="md:col-span-6 flex gap-4 items-center">
+      <img src="assets/images/accueil/panier2.jpg"
+           class="w-20 border rounded-lg">
+
+      <p class="font-medium">
+       Sac à main en cuir beige
+      </p>
+    </div>
+
+    <!-- Prix -->
+    <div class="md:col-span-2 flex justify-between md:block">
+      <span class="md:hidden font-medium">Prix :</span>
+      <span>49,99€</span>
+    </div>
+
+    <!-- Quantité -->
+    <div class="md:col-span-2 flex justify-between md:block">
+
+      <span class="md:hidden font-medium">Quantité :</span>
+
+      <div class="flex border rounded-md w-fit">
+        <button class="px-3">-</button>
+        <span class="px-3">1</span>
+        <button class="px-3">+</button>
+      </div>
+
+    </div>
+
+    <!-- Total -->
+    <div class="md:col-span-2 flex justify-between items-center">
+
+      <span class="md:hidden font-medium">Total :</span>
+
+      <div class="flex items-center gap-3">
+        <span>159,99€</span>
+        <span class="cursor-pointer">🗑</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div> 
+
+      <!-- Actions -->
+      <div class="flex justify-end gap-4 mt-8">
+        <button class="border px-6 py-3 rounded-md">
+          Continuer vos achats
+        </button>
+        <button class="bg-[#a1745e] text-white px-6 py-3 rounded-md">
+          Appliquer
+        </button>
+      </div>
+
+    </div>
+
+    <!-- GRID BAS -->
+<div class="grid md:grid-cols-3 gap-8">
+
+  <!-- CODE PROMO -->
+  <div class="bg-white rounded-xl shadow p-6 md:col-span-2">
+
+    <input
+      placeholder="Code promo"
+      class="w-full border rounded-md px-4 py-3 mb-6"
+    >
+
+    <button class="bg-[#a1745e] text-white px-6 py-3 rounded-md">
+      Appliquer
+    </button>
+
+  </div>
+
+  <!-- RÉSUMÉ -->
+  <div class="bg-white rounded-xl shadow p-6">
+
+    <h3 class="text-xl font-serif mb-6">
+      Résumé de la commande
+    </h3>
+
+    <div class="flex justify-between mb-3">
+      <span>Sous-total</span>
+      <span>209,98€</span>
+    </div>
+
+    <p class="text-sm text-[#6b5e5e] mb-6">
+      Livraison gratuite dès 50€ d'achat
+    </p>
+
+    <div class="flex justify-between font-semibold mb-6">
+      <span>Total (TTC)</span>
+      <span>209,98€</span>
+    </div>
+     <div class="flex flex-col md:flex-row items-center gap-4">
+    <p>Cartes de paiement :</p>
+    <div class="flex gap-4 text-3xl">
+      <i class="fa-brands fa-cc-visa"></i>
+      <i class="fa-brands fa-cc-mastercard"></i>
+      <i class="fa-brands fa-cc-amex"></i>
+      <i class="fa-brands fa-cc-paypal"></i>
+      <i class="fa-brands fa-cc-apple-pay"></i>
+    </div>
+  </div>
+
+    <button class="w-full bg-[#a1745e] text-white py-3 rounded-md mb-3">
+      Valider la commande
+    </button>
+
+    <p class="text-sm text-center text-[#6b5e5e]">
+      Paiement sécurisé 🔒
+    </p>
+
+  </div>
+
+  <!-- LIVRAISON GRATUITE — pleine largeur -->
+  <div class="bg-white rounded-xl shadow p-6 md:col-span-3">
+
+    <h3 class="text-xl font-serif mb-2">
+      Livraison gratuite
+    </h3>
+
+    <p class="text-[#6b5e5e] mb-4">
+      Dépensez encore 10,02€ pour bénéficier de la livraison gratuite.
+    </p>
+
+    <div class="w-full bg-gray-200 rounded-full h-3">
+      <div class="bg-[#a1745e] h-3 rounded-full w-[90%]"></div>
+    </div>
+
+    <p class="text-sm mt-3 text-[#6b5e5e]">
+      Plus que 10,02€ !
+    </p>
+
+    <p class="text-sm text-green-600 mt-2">
+      ✔ Vous bénéficiez de la livraison gratuite !
+    </p>
+
+  </div>
+
+</div>
+ 
+     </div>
+    </div>
+    <!-- SOUS TOTAL RESPONSIVE -->
+<div class="max-w-7xl mx-auto px-6 mt-10">
+
+  <div class="grid gap-6 md:grid-cols-2">
+
+    <!-- Sous-total -->
+    <div class="bg-white rounded-xl shadow p-6">
+
+      <div class="flex justify-between font-semibold mb-4">
+        <span>Sous-total :</span>
+        <span>209,98€</span>
+      </div>
+
+      <div class="flex justify-between">
+        <span>Vous bénéficiez du total :</span>
+        <span>209,98€</span>
+      </div>
+
+    </div>
+
+    <!-- Livraison gratuite -->
+    <div class="bg-white rounded-xl shadow p-6">
+
+      <div class="flex items-center justify-between mb-4">
+
+        <div class="flex items-center gap-2">
+          <div class="w-5 h-5 bg-green-500 text-white rounded-full flex items-center justify-center text-xs">
+            ✓
+          </div>
+
+          <span class="font-medium">
+            Livraison gratuite
+          </span>
+        </div>
+
+        <span class="bg-[#c49a7c] text-white px-3 py-1 rounded-md text-sm">
+          €209,98
+        </span>
+
+      </div>
+
+      <p class="text-sm text-gray-500 mb-3">
+        Dépensez encore 10,02€ pour bénéficier de
+      </p>
+
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+        <div class="bg-[#c49a7c] h-2 rounded-full w-[95%]"></div>
+      </div>
+
+      <div class="flex justify-between text-xs text-gray-400">
+        <span>€209,98</span>
+        <span>€220,00</span>
+      </div>
+
+      <p class="text-right text-xs text-gray-400 mt-2">
+        plus que €10,02 !
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+   
+
+        
+    
+
+    
+</div>
+
+
+</main>
+<footer class="bg-[#f7f2ef] text-[#3b2f2f]">
+  <!-- Partie principale -->
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      
+      <!-- Logo + description -->
+      <div>
+        <h2 class="text-3xl font-serif font-bold mb-4">Ebuy</h2>
+        <p class="text-sm leading-relaxed mb-6">
+          Vente en ligne de produits tendances et stylés,
+          livrés chez vous en un rien de temps.
+        </p>
+
+        <!-- Réseaux sociaux -->
+        <div class="flex gap-4">
+          <a href="#"class="w-10 h-10 flex items-center justify-center rounded-full bg-[#b49a8d] text-white" >
+            <i class="fa-brands fa-facebook-f"></i> 
+         
+            
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-[#b49a8d] text-white">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-[#b49a8d] text-white">
+                <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service client -->
+      <div>
+        <h3 class="font-semibold mb-4">Service client</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:underline">FAQ</a></li>
+          <li><a href="#" class="hover:underline">Livraison</a></li>
+          <li><a href="#" class="hover:underline">Retours</a></li>
+        </ul>
+      </div>
+
+      <!-- À propos -->
+      <div>
+        <h3 class="font-semibold mb-4">À propos</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:underline">À propos de nous</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover:underline">Partenaire</a></li>
+        </ul>
+      </div>
+
+      <!-- Mon compte -->
+      <div>
+        <h3 class="font-semibold mb-4">Mon compte</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="login.html" class="hover:underline">Se connecter</a></li>
+          <li><a href="#" class="hover:underline">Tableau de bord</a></li>
+          <li><a href="favorites.html" class="hover:underline">Listings favoris</a></li>
+          <li><a href="#" class="hover:underline">Déconnexion</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Ligne séparation -->
+  <div class="border-t border-[#e4d8d2]"></div>
+
+  <!-- Bas du footer -->
+  <!-- Bas du footer -->
+<div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+  
+  <!-- Moyens de paiement -->
+  <div class="flex flex-col md:flex-row items-center gap-4">
+    <p>Cartes de paiement :</p>
+    <div class="flex gap-4 text-3xl">
+      <i class="fa-brands fa-cc-visa"></i>
+      <i class="fa-brands fa-cc-mastercard"></i>
+      <i class="fa-brands fa-cc-amex"></i>
+      <i class="fa-brands fa-cc-paypal"></i>
+      <i class="fa-brands fa-cc-apple-pay"></i>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center md:text-right">
+    <p class="mb-2">
+      <a href="#" class="hover:underline">Conditions d'utilisation</a>
+      <a href="#" class="hover:underline">Politique de confidentialité</a>
+    </p>
+    <p>© 2024 Ebuy – Tous droits réservés</p>
+  </div>
+
+</div>
+
+
+  </div>
+</footer>
+</body>
+</html>
