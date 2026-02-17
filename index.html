@@ -5,111 +5,1023 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebuy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-   <nav class="w-full bg-white shadow-sm border-b">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
-  <!-- CHECKBOX -->
+</head>
+<body class="bg-[rgb(249,240,242)]">
+   <nav class="w-full bg-white shadow-sm sticky top-0">
+
   <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-  <!-- BARRE PRINCIPALE -->
-  <div class="max-w-7xl mx-auto px-10">
+  <div class="max-w-7xl mx-auto px-4 md:px-10">
     <div class="flex items-center h-20">
 
       <!-- LOGO -->
-      <div class="flex-1">
-        <a href="index.html"
-          class="text-4xl font-semibold italic text-[#3b2f2f]">
-          Ebuy
-        </a>
-      </div>
+      <a href="index.html"
+        class="text-4xl font-semibold italic text-[#3b2f2f] flex-shrink-0">
+        Ebuy
+      </a>
 
       <!-- LIENS DESKTOP -->
-      <div
-        class="hidden md:flex flex-1 justify-center gap-10 text-[#3b2f2f] text-xl italic font-medium">
-        <a href="index.html" class="hover:text-black">Accueil</a>
-        <a href="categorie.html" class="hover:text-black">Catégories</a>
-        <a href="favorite.html" class="hover:text-black">Favoris</a>
-        <a href="vendeur.html" class="hover:text-black">Vendeur</a>
+      <div class="hidden md:flex flex-1 justify-center gap-10 text-[#3b2f2f] text-xl italic font-medium">
+        <a href="index.html">Accueil</a>
+        <a href="categorie.html">Catégories</a>
+        <a href="favorite.html">Favoris</a>
+        <a href="vendeur.html">Vendeur</a>
       </div>
 
-      <!-- ICÔNES (TOUJOURS VISIBLES) -->
-      <div
-        class="flex-1 flex  text-xl md:justify-end items-center gap-8  text-[#3b2f2f]">
+      <!-- ICÔNES -->
+      <div class="flex items-center gap-6 text-[#3b2f2f] ml-auto">
 
         <!-- Recherche -->
-       <button class="text-[#3b2f2f] hover:text-black transition"> 
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" 
-        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-          d="M21 21l-4.35-4.35m1.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
-         </svg> 
-      </button>
+        <button class="text-[#3b2f2f] hover:text-black transition">
+           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" 
+           fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" 
+            d="M21 21l-4.35-4.35m1.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
+           </svg> 
+        </button>
 
         <!-- Cloche -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" 
-        fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" 
          d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11 a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341
           C7.67 6.165 6 8.388 6 11v3.159 c0 .538-.214 1.055-.595 1.436L4 17h5m6 0 a3 3 0 11-6 0h6z" />
          </svg>
        </button>
 
         <!-- Panier -->
-        <a href="panier.html" class="text-[#3b2f2f] hover:text-black transition"> 
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" 
-          fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <a href="panier.html" class="text-[#3b2f2f] hover:text-black transition">
+           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" 
+           fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" 
            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h13M7 13l-4-8M16 16a1 1 0 100 2 1 1 0 000-2zM8 16a1 1 0 100 2 1 1 0 000-2z" />
            </svg> 
         </a>
-        <!-- Profil -->
-        <a href="register.html" class="hover:text-black transition">
-           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" 
-           viewBox="0 0 24 24" fill="currentColor"> <path d="M12 12a5 5 0 100-10 5 5 0 000 10z"/> 
-           <path d="M12 14c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"/>
-           </svg>
-         </a>
-      </div>
 
-      <!-- BURGER (MOBILE SEULEMENT) -->
-      <div class="md:hidden flex-1 flex justify-end">
-        <label for="menu-toggle" class="cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            class="w-7 h-7 text-[#3b2f2f]"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
+        <!-- Profil -->
+        <a href="register.html" class="hover:text-black transition"> 
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+             <path d="M12 12a5 5 0 100-10 5 5 0 000 10z"/> 
+             <path d="M12 14c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"/> 
+            </svg> 
+        </a>
+
+        <!-- BURGER -->
+        <label for="menu-toggle" class="md:hidden cursor-pointer">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </label>
+
       </div>
 
     </div>
   </div>
 
-  <!-- MENU MOBILE (FRÈRE DIRECT DU INPUT) -->
-  <div
-    class="hidden peer-checked:block md:hidden px-10 pb-6 space-y-4
-           text-[#3b2f2f] text-lg italic font-medium bg-white">
-    <a href="index.html" class="block">Accueil</a>
-    <a href="categorie.html" class="block">Catégories</a>
-    <a href="favorite.html" class="block">Favoris</a>
-    <a href="vendeur.html" class="block">Vendeur</a>
+  <!-- MENU MOBILE -->
+  <div class="hidden peer-checked:block md:hidden px-4 pb-6 space-y-4 text-[#3b2f2f] text-lg italic font-medium bg-white">
+    <a href="index.html">Accueil</a>
+    <a href="categorie.html">Catégories</a>
+    <a href="favorite.html">Favoris</a>
+    <a href="vendeur.html">Vendeur</a>
   </div>
 
 </nav>
 
 
+
 <!--section hero-->
 
-<section class="w-full mt-6">
+<section class="w-full">
   <img
-    src=""
+    src="assets/images/accueil/hero.png"
     alt="Nouvelle collection"
-    class="w-full max-h-[450px] object-contain mx-auto"
+    class="w-full  object-contain mx-auto"
   />
 </section>
 
+<section class="w-full px-10 py-16">
+
+  <!-- TITRE -->
+  <div class="mb-10">
+    <h2 class="text-2xl font-medium text-[#3b2f2f]">
+      Meilleurs produits
+    </h2>
+    <p class="text-l text-[#3b2f2f] mt-3">
+      Les articles les plus populaires
+    </p>
+  </div>
+
+  <!-- GRID PRODUITS -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme1.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Sac femme élégant
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €49.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme1.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Sweat homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €39.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant1.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Ensemble enfant
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €29.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire1.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Bijoux accessoire
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €19.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme2.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+      Robe soiré élégant
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €40.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme2.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Chemise homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €17.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant2.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Chaussure enfant
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €29.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire2.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        accessoire homme 
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €19.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme3.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+       Parfum chanel femme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+       £180,99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme3.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        T-shirt homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £12.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant3.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+       Sac à dos enfant
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £10.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire3.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+      Chaussure Hermes
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £299.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme4.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        outils maquillage
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+       £29.99 
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme4.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Parfum homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £59.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant4.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Bouteille enfant
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £8.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire4.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+      Lunette Valentino
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £129.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme5.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        top femme
+      </h3>
+      
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+      £4.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme5.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        T-shirt homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £12.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant5.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Ensemble enfant fille
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £15.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire5.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Foulard femme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £12.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme6.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        
+      </h3>
+       Pantalon femme
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+       £10
+        
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme6.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Pantalon homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £15.99
+        
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant6.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+      Chemise superposée enfant
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £12.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire6.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+       Montre Louisvuitton 
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £199.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme7.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        kits commplets maquillage
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £39.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme7.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Chemise homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £29.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant7.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+       Ensemble enfant garçon
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £14.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire7.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+       Cap Homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £19.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme8.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Top femme été
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £5.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme8.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Ensemble Ete homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £24.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant8.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Pijama enfant
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £12.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire8.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+       Basket Homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        €19.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] shadow-l p-6 bg-white rounded-lg w-full">
+
+    <!-- PRODUIT 1 -->
+    <div class="bg-[#f7f2ef] rounded-sm  p-4">
+      <img src="assets/images/accueil/femme9.jpg" alt="Produit femme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+      robe femme casual
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+       £12.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/homme9.jpg" alt="Produit homme"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Pull over homme
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £29.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 3 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/enfant9.jpg" alt="Produit enfant"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Ensemble enfant hiver
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £15.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+    <!-- PRODUIT 4 -->
+    <div class="bg-[#f7f2ef] rounded-xl p-4">
+      <img src="assets/images/accueil/accessoire9.jpg" alt="Accessoire"
+        class="rounded-lg mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-sm font-medium text-[#3b2f2f]">
+        Sac a dos Dior
+      </h3>
+
+      <p class="text-sm font-semibold text-[#3b2f2f] mt-1">
+        £49.99
+      </p>
+
+      <a href="#"
+        class="mt-4 inline-block bg-[#b08968] text-white text-sm px-4 py-2 rounded-md hover:bg-[#9c7558] transition">
+        Voir le produit
+      </a>
+    </div>
+
+  </div>
+
+  
+
+</section>
+
+<section class="w-full px-10 py-16">
+
+  <!-- TITRE -->
+  <div class="mb-8 flex justify-between items-center">
+    <h2 class="text-2xl font-medium text-[#3b2f2f]">
+      Dernières offres
+    </h2>
+
+    <a href="categorie.html" class="text-x text-[#7a6a6a] hover:text-[#3b2f2f]">
+      Voir toutes les catégories →
+    </a>
+  </div>
+
+  <!-- OFFRES -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- OFFRE 1 -->
+    <div class="bg-[#f7f2ef] rounded-lg p-5 flex items-center gap-5">
+      <img src="assets/images/accueil/photo3.png"
+        class="w-24 h-30 object-contain">
+
+      <div>
+        <h3 class="text-sm font-medium text-[#3b2f2f]">
+          Livraison gratuite
+        </h3>
+        <p class="text-xs text-[#7a6a6a] mt-1">
+          Livraison offerte dès 50€ d’achat
+        </p>
+
+        <a href="#"
+          class="inline-block mt-3 text-xs bg-[#b08968] text-white px-3 py-1 rounded-md hover:bg-[#9c7558] transition">
+          En savoir plus
+        </a>
+      </div>
+    </div>
+
+    <!-- OFFRE 2 -->
+    <div class="bg-[#e6d2bf] rounded-lg p-5 flex items-center gap-5">
+      <img src="assets/images/accueil/photo4.png"
+        class="w-24 h-24 object-contain">
+
+      <div>
+        <h3 class="text-sm font-medium text-[#3b2f2f] flex items-center gap-1">
+          ⚡ Vente flash
+        </h3>
+        <p class="text-xs text-[#3b2f2f] font-semibold mt-1">
+          -50%
+        </p>
+
+        <a href="#"
+          class="inline-block mt-3 text-xs bg-white text-[#3b2f2f] px-3 py-1 rounded-md hover:bg-gray-100 transition">
+          Voir les offres
+        </a>
+      </div>
+    </div>
+
+    <!-- OFFRE 3 -->
+    <div class="bg-[#f7f2ef] rounded-lg p-5 flex items-center gap-5">
+      <img src="assets/images/accueil/photo5.png"
+        class="w-24 h-24 object-contain">
+
+      <div>
+        <h3 class="text-sm font-medium text-[#3b2f2f]">
+          Super Deals
+        </h3>
+        <p class="text-xs text-[#7a6a6a] mt-1">
+          Découvrez nos meilleures promotions
+        </p>
+
+        <a href="#"
+          class="inline-block mt-3 text-xs bg-[#b08968] text-white px-3 py-1 rounded-md hover:bg-[#9c7558] transition">
+          Découvrir
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="bg-[#f7f2ef] text-[#3b2f2f]">
+  <!-- Partie principale -->
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      
+      <!-- Logo + description -->
+      <div>
+        <h2 class="text-3xl font-serif font-bold mb-4">Ebuy</h2>
+        <p class="text-sm leading-relaxed mb-6">
+          Vente en ligne de produits tendances et stylés,
+          livrés chez vous en un rien de temps.
+        </p>
+
+        <!-- Réseaux sociaux -->
+        <div class="flex gap-4">
+          <a href="#"class="w-10 h-10 flex items-center justify-center rounded-full bg-[#b49a8d] text-white" >
+            <i class="fa-brands fa-facebook-f"></i> 
+         
+            
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-[#b49a8d] text-white">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-[#b49a8d] text-white">
+                <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service client -->
+      <div>
+        <h3 class="font-semibold mb-4">Service client</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:underline">FAQ</a></li>
+          <li><a href="#" class="hover:underline">Livraison</a></li>
+          <li><a href="#" class="hover:underline">Retours</a></li>
+        </ul>
+      </div>
+
+      <!-- À propos -->
+      <div>
+        <h3 class="font-semibold mb-4">À propos</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:underline">À propos de nous</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover:underline">Partenaire</a></li>
+        </ul>
+      </div>
+
+      <!-- Mon compte -->
+      <div>
+        <h3 class="font-semibold mb-4">Mon compte</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="login.html" class="hover:underline">Se connecter</a></li>
+          <li><a href="#" class="hover:underline">Tableau de bord</a></li>
+          <li><a href="favorites.html" class="hover:underline">Listings favoris</a></li>
+          <li><a href="#" class="hover:underline">Déconnexion</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Ligne séparation -->
+  <div class="border-t border-[#e4d8d2]"></div>
+
+  <!-- Bas du footer -->
+  <!-- Bas du footer -->
+<div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+  
+  <!-- Moyens de paiement -->
+  <div class="flex flex-col md:flex-row items-center gap-4">
+    <p>Cartes de paiement :</p>
+    <div class="flex gap-4 text-3xl">
+      <i class="fa-brands fa-cc-visa"></i>
+      <i class="fa-brands fa-cc-mastercard"></i>
+      <i class="fa-brands fa-cc-amex"></i>
+      <i class="fa-brands fa-cc-paypal"></i>
+      <i class="fa-brands fa-cc-apple-pay"></i>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center md:text-right">
+    <p class="mb-2">
+      <a href="#" class="hover:underline">Conditions d'utilisation</a>
+      •
+      <a href="#" class="hover:underline">Politique de confidentialité</a>
+    </p>
+    <p>© 2024 Ebuy – Tous droits réservés</p>
+  </div>
+
+</div>
+
+
+  </div>
+</footer>
 
 </body>
 </html>
