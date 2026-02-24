@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produit</title>
 
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#f9f0f2] text-[#3b2f2f]">
+
+<body class="bg-[#f9f0f2]">
     <nav class="w-full bg-white shadow-sm sticky top-0">
 
   <input type="checkbox" id="menu-toggle" class="hidden peer">
@@ -27,10 +24,22 @@
 
       <!-- LIENS DESKTOP -->
       <div class="hidden md:flex flex-1 justify-center gap-10 text-[#3b2f2f] text-xl italic font-medium">
-        <a href="index.html">Accueil</a>
-        <a href="categorie.html">Catégories</a>
-        <a href="favorite.html">Favoris</a>
-        <a href="vendeur.html">Vendeur</a>
+        <a href="index.html" 
+           class="border-b-2 border-[#a1745e] pb-1">
+          Accueil
+        </a>
+
+         <a href="categorie.html" class="hover:border-b-2 hover:border-[#a1745e] pb-1">
+         Catégories
+        </a>
+
+         <a href="favorite.html" class="hover:border-b-2 hover:border-[#a1745e] pb-1">
+         Favoris
+        </a>
+
+         <a href="vendeur.html" class="hover:border-b-2 hover:border-[#a1745e] pb-1">
+          Vendeur
+        </a>
       </div>
 
       <!-- ICÔNES -->
@@ -94,111 +103,82 @@
 
 </nav>
 
-<!-- Section image connexion -->
-<section class="w-full h-[200px] 
-bg-[url('assets/images/accueil/fond1.png')] 
-bg-cover bg-center bg-no-repeat 
-flex items-center justify-center">
+<main class="max-w-6xl mx-auto px-6 py-12">
 
-<div class="text-center">
-
-<h1 class="text-5xl font-serif text-[#3b2f2f] mb-2">
-Connexion
+<h1 class="text-3xl font-serif mb-10">
+Détail du produit
 </h1>
 
-<p class="text-[#6b5e5e] text-lg">
-Connectez-vous à votre compte
-</p>
+<div class="grid md:grid-cols-2 gap-10 bg-white p-8 rounded-xl shadow">
+
+<!-- IMAGE -->
+<div>
+
+<img
+src="assets/images/accueil/femme1.jpg"
+class="rounded-xl w-full">
 
 </div>
 
-</section>
-<!-- Partie formulaire -->
-<main class="bg-[url('assets/images/accueil/fond2.png')] 
-bg-cover bg-center bg-no-repeat py-16">
 
-<section class="w-full">
+<!-- INFOS -->
+<div class="flex flex-col justify-center">
 
-<div class="max-w-xl mx-auto 
-bg-white rounded-xl shadow-lg 
-px-10 py-10">
-
-
-<h2 class="text-3xl font-serif text-[#3b2f2f] mb-2">
-Connexion
+<h2 class="text-2xl font-semibold mb-4">
+Sac femme élégant
 </h2>
 
-<p class="text-sm text-[#6b5e5e] mb-6">
-Connectez-vous à votre compte
+<p class="text-2xl text-[#a1745e] font-bold mb-6">
+49,99€
 </p>
 
 
-<form class="space-y-5">
+<p class="text-gray-600 mb-6">
 
-<input
-type="email"
-placeholder="Adresse e-mail"
-class="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-1 focus:ring-[#a1745e]"
-/>
+Sac à main élégant pour femme,
+matière cuir synthétique,
+idéal pour sorties et occasions spéciales.
 
-<input
-type="password"
-placeholder="Mot de passe"
-class="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-1 focus:ring-[#a1745e]"
-/>
+</p>
 
-<p class="text-xs text-[#6b5e5e] leading-relaxed">
-En me connectant, j’accepte les
-<span class="underline cursor-pointer">
-Conditions d’utilisation
+
+<!-- QUANTITE -->
+<div class="flex items-center gap-4 mb-6">
+
+<span>Quantité :</span>
+
+<div class="flex border rounded-md">
+
+<button class="px-4 py-2">-</button>
+
+<span class="px-4 py-2">
+1
 </span>
-et la
-<span class="underline cursor-pointer">
-Politique de confidentialité
-</span>.
-</p>
 
-<button
-type="submit"
-class="w-full bg-[#a1745e] text-white py-3 rounded-md hover:opacity-90 transition">
-Se connecter
+<button class="px-4 py-2">+</button>
+
+</div>
+
+</div>
+
+
+<!-- BOUTON -->
+<button class="bg-[#a1745e] text-white px-8 py-3 rounded-md">
+
+Ajouter au panier
+
 </button>
 
-<p class="text-sm text-center mt-4">
-Vous n'avez pas encore de compte ?
-</p>
 
-<a href="register.html"
-class="block text-center mt-2 border border-[#a1745e] text-[#a1745e]
-py-2 rounded-md hover:bg-[#a1745e] hover:text-white transition">
-S'inscrire
-</a>
+</div>
 
-
-      <!-- Boutons sociaux -->
-      <div class="flex flex-col md:flex-row gap-4">
-        <button
-          type="button"
-          class="w-full border rounded-md py-3 flex items-center justify-center gap-2 hover:bg-gray-50"
-        >
-          <i class="fa-brands fa-facebook-f text-blue-700"></i>
-          Inscription avec Facebook
-        </button>
-
-        <button
-          type="button"
-          class="w-full border rounded-md py-3 flex items-center justify-center gap-2 hover:bg-gray-50"
-        >
-          <i class="fa-brands fa-google text-red-500"></i>
-          Inscription avec Google
-        </button>
-      </div>
-
-    </form>
+</div>
+<!-- dernier section -->
+  <div class="grid grid-cols-3 place-items-center mt-20 gap-10">
+     <div><img src="assets/images/Favori/favori-img1.png" alt=""></div>
+     <div><img src="assets/images/Favori/favori-img2.png" alt=""> </div>
+     <div><img src="assets/images/Favori/favori-img3.png" alt="" ></div>
   </div>
-</section>
-
-
 
 </main>
 
